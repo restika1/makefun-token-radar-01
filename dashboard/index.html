@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Token Launch Radar</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <div class="logo" aria-hidden="true"><span></span></div>
+    <div>
+      <h1>Token Launch Radar</h1>
+      <p class="sub">protocols with no token, ranked by what one could be worth &middot; DefiLlama snapshot <span id="asof"></span></p>
+    </div>
+  </div>
+  <div class="stats" id="stats"></div>
+</header>
+<div class="formula" id="formula"></div>
+<nav class="tabs" id="tabs">
+  <button data-tab="radar" class="on">Radar <span class="count" id="n-radar"></span></button>
+  <button data-tab="launched">Launched comparables <span class="count" id="n-launched"></span></button>
+  <button data-tab="screened">Screened out <span class="count" id="n-screened"></span></button>
+</nav>
+<div class="toolbar" id="toolbar">
+  <input id="q" type="search" placeholder="search name or slug" autocomplete="off">
+  <select id="category"><option value="">all categories</option></select>
+  <select id="chain"><option value="">all chains</option></select>
+  <label class="tog"><input type="checkbox" id="wl"> watchlist only</label>
+  <span class="spacer"></span>
+  <span class="hint">click a row for the farm plan &middot; click a column to sort</span>
+</div>
+<main id="view"></main>
+<aside id="drawer" class="closed"><button id="close" title="close">&times;</button><div id="drawer-body"></div></aside>
+<div id="veil" class="closed"></div>
+<footer>implied values are the model&rsquo;s claim about tokens that do not exist, never a prediction one ships &middot; every figure derives from the sealed snapshot: TVL, 7-day change, chains, tracking age, and the mcap/TVL the market pays for launched tokens in the same category</footer>
+<script src="data.dat"></script>
+<script src="app.js"></script>
+</body>
+</html>
